@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="container orders-container">
+
+    <h3 class="orders-title">📦 Your Orders</h3>
+
+    {% if orders|length == 0 %}
+        <p class="text-center text-muted">No orders yet.</p>
+    {% else %}
+
+        <div class="orders-grid">
+
+            {% for o in orders %}
+            <div class="order-card">
+
+                <div class="order-top">
+                    <span class="order-id">Order #{{ o.id }}</span>
+                    <span class="order-status">{{ o.status }}</span>
+                </div>
+
+                <div class="order-bottom">
+                    <span class="order-total">₹{{ o.total }}</span>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

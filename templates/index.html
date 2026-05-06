@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container food-container">
+
+    <h2 class="page-title">🍔 Menu</h2>
+
+    <div class="food-grid">
+
+        {% for food in foods %}
+
+        <div class="food-card">
+
+            <img src="{{ url_for('static', filename='images/' + food.image) }}"
+                 class="food-img">
+
+            <div class="food-body">
+
+                <h5 class="food-name">{{ food.name }}</h5>
+                <p class="food-price">₹{{ food.price }}</p>
+
+                <a href="/add_to_cart/{{ food.id }}" class="btn btn-dark food-btn">
+                    Add to Cart
+                </a>
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
