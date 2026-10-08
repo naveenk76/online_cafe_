@@ -1,3 +1,35 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# JetBrains
+/shelf/
+/workspace.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Flask
+instance/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
